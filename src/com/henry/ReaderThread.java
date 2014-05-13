@@ -14,7 +14,11 @@ import java.io.InputStream;
 import java.net.Socket;
 
 /**
- * ReaderThread 管理一个套接字连接
+ * ReaderThread 管理一个套接字连接，它采用同步的方式从该套接字读取数据
+ * 并将接收到的数据进行处理。为了结束某个用户的连接或者关闭服务器，ReaderThread
+ * 改写了interrupt方法，使其既能处理标准的中断，也能关闭底层的套接字。
+ * 因此无论ReaderThread线程是在read方法中阻塞还是在某个可中断的阻塞方法中阻塞，
+ * 都可以被中断并停止当前的工作
  * 
  * @author Administrator
  * @version [版本号, 2014-5-13]
