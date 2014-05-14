@@ -30,7 +30,7 @@ public class ReaderThread extends Thread {
   private final Socket socket;
 
   private final InputStream in;
-
+  
   public ReaderThread(Socket socket) throws IOException {
     this.socket = socket;
     this.in = socket.getInputStream();
