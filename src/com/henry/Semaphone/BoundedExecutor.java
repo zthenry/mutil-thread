@@ -19,7 +19,7 @@ import java.util.concurrent.Semaphore;
  * @author  zhangtao 
  * @version  [版本号, 2014-5-24]
  * @see  [相关类/方法]
- * @since  [产品/模块版本]
+ * @since  mutil-thread
  */
 public class BoundedExecutor
 {
